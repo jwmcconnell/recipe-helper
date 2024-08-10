@@ -3,8 +3,8 @@ import { render, screen } from "@testing-library/react";
 import { Root } from "./Root";
 
 describe("Root", () => {
-  it("should display root", () => {
+  it("should display Recipe Helper", () => {
     render(<Root />);
-    expect(screen.getByText("Root")).toBeInTheDocument();
+    expect(screen.getByText("Recipe Helper")).toBeInTheDocument();
   });
 });
