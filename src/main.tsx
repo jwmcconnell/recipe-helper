@@ -11,6 +11,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Root } from "./pages/Root/Root.tsx";
 import { ErrorPage } from "./pages/Error/Error.tsx";
 import { Home } from "./pages/Home/Home.tsx";
+import { RecipeEditor } from "./pages/RecipeEditor/RecipeEditor.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/new/recipe",
+        element: <RecipeEditor />,
       },
     ],
   },
