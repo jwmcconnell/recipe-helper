@@ -28,6 +28,9 @@ export default tseslint.config({
       "warn",
       { allowConstantExport: true },
     ],
+    "restrict-template-expressions": {
+      allowNumber: true,
+    },
     ...react.configs.recommended.rules,
     ...react.configs["jsx-runtime"].rules,
   },
