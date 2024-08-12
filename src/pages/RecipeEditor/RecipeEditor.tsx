@@ -111,7 +111,7 @@ export function RecipeEditor(): ReactElement {
           sx={{ m: 1 }}
         />
 
-        <Typography variant="h5" sx={{ m: 1 }}>
+        <Typography variant="h6" sx={{ m: 1 }}>
           Ingredients
         </Typography>
         <Box>
@@ -198,7 +198,7 @@ export function RecipeEditor(): ReactElement {
           </Button>
         </Grid>
 
-        <Typography variant="h5" sx={{ m: 1 }}>
+        <Typography variant="h6" sx={{ m: 1 }}>
           Steps
         </Typography>
 

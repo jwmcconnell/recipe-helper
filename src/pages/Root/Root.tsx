@@ -7,7 +7,9 @@ export function Root(): ReactElement {
     <Box>
       <AppBar position="static">
         <Toolbar>
-          <Typography>Recipe Helper</Typography>
+          <Typography variant="h1" sx={{ fontSize: 36 }}>
+            Recipe Helper
+          </Typography>
         </Toolbar>
       </AppBar>
       <Outlet />
