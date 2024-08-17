@@ -12,4 +12,7 @@ export default defineConfig({
     include: ["**/?*.(unit|acceptance).test.+(ts|tsx)"],
     exclude: ["setupTests.test.ts"],
   },
+  server: {
+    port: 3000,
+  },
 });

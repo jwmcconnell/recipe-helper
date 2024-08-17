@@ -6,6 +6,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import { Root } from "./pages/Root/Root.tsx";
@@ -40,9 +41,17 @@ const darkTheme = createTheme({
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <Auth0Provider
+      domain="jackmcconnell.auth0.com"
+      clientId="S5njnxTC3q8xQyilszptEhLqIwGedd3s"
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+      }}
+    >
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </Auth0Provider>
   </StrictMode>
 );
