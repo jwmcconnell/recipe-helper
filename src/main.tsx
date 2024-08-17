@@ -13,6 +13,8 @@ import { Root } from "./pages/Root/Root.tsx";
 import { ErrorPage } from "./pages/Error/Error.tsx";
 import { Home } from "./pages/Home/Home.tsx";
 import { RecipeEditor } from "./pages/RecipeEditor/RecipeEditor.tsx";
+import { Landing } from "./pages/Landing/Landing.tsx";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,11 +24,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <Landing />,
+      },
+      {
+        path: "/home",
+        element: (
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/new/recipe",
-        element: <RecipeEditor />,
+        element: (
+          <ProtectedRoute>
+            <RecipeEditor />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
